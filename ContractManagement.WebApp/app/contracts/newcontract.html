@@ -1,0 +1,17 @@
+﻿<h1>Contracts</h1>
+<div class="status-container content-wrapper">
+    <div class="form-group col-xs-6">
+
+        <input type="text" name="Name" ng-model="newContract.name" required placeholder="Contract name" />
+        <input type="number" name="Salary" ng-model="newContract.salary" required placeholder="Salary" disabled />
+        <input type="number" name="Experiance" ng-model="newContract.experienceInYears" required placeholder="2" ng-change="getRecommendedSalary()" />
+        <select name="ContractType" ng-options="o.name for o in contractTypes" ng-model="newContract.contractType" ng-change="getRecommendedSalary()"></select>
+    
+        <button class="btn btn-primary" ng-click="addNewContract()">Submit</button>
+    
+        <div ng-show="isErrorMessage()" class="alert alert-danger">
+            {{errorMessage}}
+        </div>
+
+    </div>
+</div>

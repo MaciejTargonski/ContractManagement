@@ -1,0 +1,4 @@
+﻿@import "../../Content/bootstrap.css";
+@import "../../Content/ui-grid.css";
+
+.ui-grid-sort-priority-number { font-size: 0; }

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<base href="/"></base>-->
+    <title ng-bind="pageTitle"></title>
+    <link rel="stylesheet" href="app/css/app.css">
+    <script src="scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="app" loading-spinner="isAppInitInProgress">
+        <header>
+           
+        </header>
+        <div ui-view></div>
+        <footer>
+            
+        </footer>
+
+    </div>
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="scripts/angular-ui/ui-utils.js"></script>
+    <script src="scripts/angular-ui/ui-utils-ieshiv.js"></script>
+    <script src="scripts/spin.js"></script>
+    <script src="scripts/underscore.js"></script>
+    <script src="scripts/angular-breadcrumb.js"></script>
+    <script src="scripts/ui-grid.js"></script>
+    <script>
+        var app = app || {};
+        app.rootApiUrl = "http://localhost:24454";
+    </script>
+    <script src="app/common/main.js"></script>
+    <script src="app/contracts/contracts.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>
