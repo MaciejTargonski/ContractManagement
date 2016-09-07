@@ -45,6 +45,11 @@
                 $scope.gridOptions.data = gridData.value;
             };
 
+            $scope.optionalFilters = {
+                programmers5Years: false,
+                salary5000: false,
+            };
+
             var getPage = function () {
 
                 
@@ -57,6 +62,15 @@
                 {
                     url = url + '&$orderby=' + paginationOptions.sortColName + ' ' + paginationOptions.sortDir;
                 }
+
+                if ($scope.optionalFilters.programmers5Years && $scope.optionalFilters.salary5000)
+                {
+                    url = url + '&$filter=ExperienceInYears ge 5 and Salary gt 5000';
+                } else if ($scope.optionalFilters.salary5000) {
+                    url = url + '&$filter=Salary gt 5000';
+                } else if ($scope.optionalFilters.programmers5Years){
+                    url = url + '&$filter=ExperienceInYears ge 5';
+                }
                 
 
                 $http.get(url)
@@ -68,6 +82,8 @@
 
                 
             }
+
+            $scope.refreshGrid = getPage;
 
             $scope.gridOptions = {
                 enableSorting: true,

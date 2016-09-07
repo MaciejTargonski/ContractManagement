@@ -4,6 +4,21 @@
         <button type="button" class="btn btn-primary" ng-click="addNewContract()">Add new contract</button>
     </div>
 
+    <div>
+        <div class="input-group">
+            <input type="checkbox" ng-model="optionalFilters.programmers5Years" ng-change="refreshGrid()" />
+            <label>Programmers with 5 years experiance</label>
+        </div>
+        <div class="input-group">
+
+            <input type="checkbox" ng-model="optionalFilters.salary5000" ng-change="refreshGrid()" />
+            <label>Contracts with salary >5000</label>
+        </div>
+
+    </div>
+
+
+
     <div ui-layout ui-layout-refresh>
         <div ui-layout-container>
             <div ui-grid="gridOptions"
