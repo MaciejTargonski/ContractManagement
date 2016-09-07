@@ -155,6 +155,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ContractManagementApiContext-20160820194208.mdf" />
+    <Content Include="App_Data\ContractManagementApiContext-20160820194208_log.ldf">
+      <DependentUpon>ContractManagementApiContext-20160820194208.mdf</DependentUpon>
+    </Content>
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
